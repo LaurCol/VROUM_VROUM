@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails du produit{% endblock %}
+
+{% block body %}
+<div class="slideshow">
+    <div class="container opacity">
+        <div class="annonce-title" style=" width:100%; height:100%;">
+           <span class="spanshow"> <h1>{{ occasions.marque }} - {{occasions.modele}}</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus dolore molestias commodi tempora eligendi nostrum incidunt labore, vel, consequatur consequuntur consectetur ut expedita eius sequi illum, fugiat nisi quasi harum dolores sunt. Ipsum, labore ullam cumque eaque amet perspiciatis quasi.</p>
+            <p class="h2"><strong>{{ occasions.km }} km</strong> pour un prix de <strong>{{ occasions.prix }}</strong>€</p>
+            <a href="#" class="btn">Prendre rendez-vous</a></span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-3">
+            <div class="box">
+                <h6>Nombre de propriétaires : {{ occasions.NombreProprio }}</h6>
+                <h6>Cylindrée : {{ occasions.cylindree }}L</h6>
+                <h6>Puissance : {{ occasions.puissance }}ch</h6>
+                <h6>Carburant : {{ occasions.carburant }}</h6>
+                <h6>Année de mise en circulation : {{ occasions.anneeCircu }}</h6>
+                <h6>Transmission : {{ occasions.transmission }}</h6>
+                <h6>Options : </h6><p>{{ occasions.options }}</p>
+                <h6>Description :</h6>{{ occasions.description | raw}}
+                </div>
+                {#
+                <div class="bd-example">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            {% for gallery in occasions.gallery %}
+                            <li data-target="#carouselExampleCaptions" data-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active"{% endif %}></li>
+                            {% endfor %}
+                        </ol>
+                        <div class="carousel-inner">
+
+                            {% for gallery in occasions.gallery %}
+                            
+                            <div class="carousel-item {% if loop.first %}active{% endif %}">
+                                <img src="http://placehold.it/500x500" class="d-block w-100"  alt="image de {{ occasions.modele }}">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>{{  occasions.modele  }}</h5>
+                                    <p>{{ gallery.caption }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        
+                        </div>
+                            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                    </div>
+                </div>
+                #}
+                <div style="clear:both;">&nbsp;</div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        {% for gallery in occasions.gallery %}
+                            <li data-target="#carouselExampleIndicators" data-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active"{% endif %}></li>
+                        {% endfor %}
+                    </ol>
+                    <div class="carousel-inner">
+                     {% for gallery in occasions.gallery %}
+                        <div class="carousel-item {% if loop.first %}active{% endif %}">
+                        <img class="d-block w-100" src="http://placehold.it/200x200" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>{{  occasions.modele  }}</h5>
+                                <p>{{ gallery.caption }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}    
+                        
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+    {% block javascripts %}{% endblock %}

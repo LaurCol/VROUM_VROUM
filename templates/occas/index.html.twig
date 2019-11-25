@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Occasions{% endblock %}
+{% set url = path("occas_create") %}
+{% block body %}
+
+<div class= "occastitle">Nos occasions</div>
+<div class="slideoccas">
+
+{% for occasion in occasions %}
+        {% set url = path('occas_show', {'slug': occasion.slug }) %}
+<a href="{{ url }}"><div class="cardbox">
+<div class="modele">{{occasion.marque}} - {{occasion.modele}}</div>
+<div class="couv"><img src="{{occasion.imgCouv}}" alt="image"></div>
+<div class="km">{{occasion.km}} km</div>
+<div class="prix">{{occasion.prix}} €</div>
+
+
+</div></a>
+{% endfor %}
+
+</div>
+{% endblock %}
