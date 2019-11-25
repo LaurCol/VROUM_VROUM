@@ -9,22 +9,19 @@
            <span class="spanshow"> <h1>{{ occasions.marque }} - {{occasions.modele}}</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus dolore molestias commodi tempora eligendi nostrum incidunt labore, vel, consequatur consequuntur consectetur ut expedita eius sequi illum, fugiat nisi quasi harum dolores sunt. Ipsum, labore ullam cumque eaque amet perspiciatis quasi.</p>
             <p class="h2"><strong>{{ occasions.km }} km</strong> pour un prix de <strong>{{ occasions.prix }}</strong>€</p>
-            <a href="#" class="btn">Prendre rendez-vous</a></span>
         </div>
     </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 mb-3">
-            <div class="box">
-                <h6>Nombre de propriétaires : {{ occasions.NombreProprio }}</h6>
-                <h6>Cylindrée : {{ occasions.cylindree }}L</h6>
-                <h6>Puissance : {{ occasions.puissance }}ch</h6>
-                <h6>Carburant : {{ occasions.carburant }}</h6>
-                <h6>Année de mise en circulation : {{ occasions.anneeCircu }}</h6>
-                <h6>Transmission : {{ occasions.transmission }}</h6>
-                <h6>Options : </h6><p>{{ occasions.options }}</p>
-                <h6>Description :</h6>{{ occasions.description | raw}}
+            <div>
+                <h1>Nombre de propriétaires :</h1> <h6>{{ occasions.NombreProprio }}</h6>
+                <h1>Cylindrée :</h1> <h6>{{ occasions.cylindree }}L</h6>
+                <h1>Puissance :</h1> <h6>{{ occasions.puissance }}ch</h6>
+                <h1>Carburant :</h1> <h6>{{ occasions.carburant }}</h6>
+                <h1>Année de mise en circulation :</h1> <h6>{{ occasions.anneeCircu }}</h6>
+                <h1>Transmission :</h1> <h6>{{ occasions.transmission }}</h6>
+                <h1>Options : </h1><p>{{ occasions.options }}</p>
+                <h1>Description :</h1>{{ occasions.description | raw}}
                 </div>
                 {#
                 <div class="bd-example">
@@ -69,7 +66,7 @@
                     <div class="carousel-inner">
                      {% for gallery in occasions.gallery %}
                         <div class="carousel-item {% if loop.first %}active{% endif %}">
-                        <img class="d-block w-100" src="http://placehold.it/200x200" alt="First slide">
+                        <img class="d-block w-100" src="https://www.placecage.com/640/360" alt="First slide">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>{{  occasions.modele  }}</h5>
                                 <p>{{ gallery.caption }}</p>

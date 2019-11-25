@@ -203,8 +203,7 @@ a:hover {
 }
 .slideshow{
 
-    width:73%;
-    left:27%;
+    width:100%;
     min-height:100%;
     margin-top:100px;
     color:white;
