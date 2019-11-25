@@ -51,7 +51,9 @@ class AnnonceType extends AbstractType
         ->add('options', TextareaType::class, $this->getConfiguration('Options','Donnez toutes les options  de votre voiture'))
         ->add('km', IntegerType::class, $this->getConfiguration('Nombre de kilomètres','Donnez le nombre de kilomètres parcourus'))
         ->add('nombre_proprio', IntegerType::class, $this->getConfiguration('Nombre de propriétaire(s)','Donnez le nombre de propriétaires de votre voiture'))
-        ->add('slug', TextType::class, $this->getConfiguration('Slug','Adresse web (automatique)'))
+        ->add('slug', TextType::class, $this->getConfiguration('Slug','Adresse web (automatique)',[
+            'required' => false
+        ]))
         ->add('imgCouv', UrlType::class, $this->getConfiguration('Url de l\'image','Donnez l\'adresse de votre image'))
         ->add('prix', MoneyType::class, $this->getConfiguration('Prix','indiquez le prix que vous voulez pour vendre votre voiture'))
         ->add(
