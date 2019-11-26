@@ -32,9 +32,8 @@ class CarsFixtures extends Fixture
             $carbu = ['essence','diesel'];
             $carburant= $carbu[$chCarbu];
             $transmission= $transmi[$chTransmi];
-            $modele = ['Giulia','Spider','Stelvio','Quadrifoglio','Tonale'];
-            $modeleImg = ['https://pictures.dealer.com/n/napletonalfaromeoindianapolisfcaar/1746/ccac596ba0ee4d9c3581b623893018b0x.jpg'];
-            
+            $modele = ['Giulia','Spider','Stelvio','Quadrifoglio','Tonale','Stelvio','Stelvio','Stelvio','Stelvio'];
+            $modeleImg = ['https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Alfa-Romeo_Giulietta.jpg/800px-Alfa-Romeo_Giulietta.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Alfa-Romeo_Giulietta.jpg/800px-Alfa-Romeo_Giulietta.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Alfa_Romeo_8C_Competizione_1Y7A6049.jpg/800px-Alfa_Romeo_8C_Competizione_1Y7A6049.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Alfa_Romeo_8C_Competizione_1Y7A6049.jpg/800px-Alfa_Romeo_8C_Competizione_1Y7A6049.jpg', 'https://img.autoplus.fr/news/2019/05/17/1538606/65b7aa618243569322eb0e34-1200-800.jpg', 'https://img.autoplus.fr/news/2019/05/17/1538606/65b7aa618243569322eb0e34-1200-800.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Alfa-Romeo_Giulietta.jpg/800px-Alfa-Romeo_Giulietta.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Alfa-Romeo_Giulietta.jpg/800px-Alfa-Romeo_Giulietta.jpg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Alfa-Romeo_Giulietta.jpg/800px-Alfa-Romeo_Giulietta.jpg'];
             $coverImage = $modeleImg[$chMod];
             $descri = '<p>' . join('</p><p>',$faker->paragraphs(5)).'</p>';
             $options = $faker->paragraph(2);
